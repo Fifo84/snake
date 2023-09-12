@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>סנייק</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+
+
+
+
+<body onload="createBoard()">
+    <h1>Snake Game</h1>
+
+    <div class="frame">
+
+        <div id="modal">
+            <div id="modal-content">
+                <h2>Instructions</h2>
+                <p>Use the arrow keys (↑, →, ↓, ←) to control the direction of the snake</p>
+                <p>Your goal is to eat the fruits that appear on the board</p>
+                <p>Each 🥝 you eat will increase your score by 10 points and 🍊 by 20 points </p>
+                <p>If your timer reaches 0 or the snake collides with a wall or itself, the game is over</p>
+                <p>Try to achieve the highest score and beat your best score!</p>
+                <h2>Select Difficulty</h2>
+                <div id="modal-buttons">
+                    <button id="easy-button">Easy</button>
+                    <button id="normal-button">Normal</button>
+                    <button id="hard-button">Hard</button>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <button id="sound-toggle">Toggle Sound</button>
+            <div id="timer">1:00</div>
+            <div id="score">Score: 0</div>
+            <div id="best-score">Best Score: 0</div>
+        </div>
+        <div class="board"></div>
+
+    </div>
+
+
+
+
+    </div>
+</body>
+
+</html>
