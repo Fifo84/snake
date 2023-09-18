@@ -36,7 +36,6 @@ modalButtons.forEach((button) => {
 });
 
 window.addEventListener("DOMContentLoaded", function () {
-  // Check screen width
   if (window.innerWidth <= 480) {
     alert(
       "Sorry the controls for this game is not suited for mobile yet... please switch to a bigger device "
@@ -48,12 +47,10 @@ function updateSoundToggleText() {
   soundToggle.textContent = isSoundEnabled ? "Sound: On" : "Sound: Off";
 }
 
-// גבולות ימין
 for (let i = 0; i < height; i++) {
   rightBoundaries.push(i * width - 1);
 }
 
-// גבולות שמאל
 for (let i = 1; i <= height; i++) {
   leftBoundaries.push(i * width);
 }
@@ -71,7 +68,7 @@ function createBoard() {
 
   setRandom();
 }
-// ----------------------------------------
+
 function startClock() {
   if (!timerInterval) {
     timerInterval = setInterval(updateTimer, 1000);
@@ -236,7 +233,6 @@ function setRandom() {
       (currentTime - lastOrangeEatenTime) / 1000;
 
     if (elapsedTimeSinceLastOrange < 30 || Math.random() >= 0.1) {
-      // 10% chance of spawning an orange
       divs[random].classList.add("blueberry");
     } else {
       divs[random].classList.add("orange");
