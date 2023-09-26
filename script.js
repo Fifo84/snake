@@ -13,6 +13,7 @@ let isSoundEnabled = true;
 let lastOrangeEatenTime = 0;
 const rightBoundaries = [];
 const leftBoundaries = [];
+let snakeSpeed = 500;
 
 const timerDisplay = document.getElementById("timer");
 const modal = document.getElementById("modal");
@@ -294,7 +295,7 @@ function startGame(difficulty) {
     initialTime % 60
   }`;
 
-  document.getElementById("difficulty-selection").style.display = "none";
+  // document.getElementById("difficulty-selection").style.display = "none";
 
   startAuto(snakeSpeed);
   startClock();
